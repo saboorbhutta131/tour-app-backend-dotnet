@@ -41,3 +41,11 @@
 /home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/System.CodeDom.dll
 /home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Npgsql.dll
 /home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/abdulsaboor/dev/dotnet/TourApp/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
