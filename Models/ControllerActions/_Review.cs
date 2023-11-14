@@ -1,14 +1,14 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace Models
+namespace Models.ControllerActions._Review
 {
-    public class Review
-    {
+    public class CreateReview{
         public int Rating { get; set; }
         public string Comment { get; set; } = "";
         public Guid TourId { get; set; }
         public Guid UserId { get; set; }
-        public Tour Tour { get; set; } = new Tour();
-        public User User { get; set; } =  new User();
+
     }
+
 }
