@@ -36,6 +36,7 @@ public class TourController : ControllerBase
         return Ok(_tours.ToList());
     }
     [HttpPost("create")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Create(CreateTour _Tour)
     {
         _db.Tour.Add(new Tour{
@@ -48,6 +49,7 @@ public class TourController : ControllerBase
         return Ok("Tour Created Successfully");
     }
     [HttpPut("edit")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Edit(EditTour _tour)
     {
         var _existingTour = _db.Tour.FirstOrDefault(p => p.Id == _tour.Id);
@@ -63,6 +65,7 @@ public class TourController : ControllerBase
         return NotFound();
     }
     [HttpDelete("{Id}")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Delete(Guid Id)
     {
         Tour tourToDelete = _db.Tour.FirstOrDefault(pl => pl.Id == Id);
@@ -70,6 +73,7 @@ public class TourController : ControllerBase
         {
             _db.Tour.Remove(tourToDelete);
             _db.SaveChanges();
+            return Ok("Tour deleted successfully");
         }
         return NotFound();
     }

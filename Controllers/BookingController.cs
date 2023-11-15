@@ -30,6 +30,7 @@ public class BookingController : ControllerBase
         return Ok(_bookings.ToList());
     }
     [HttpPost("create")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Create(CreateBooking _Booking)
     {
         Tour  _tour  = _db.Tour.Find(_Booking.TourId);

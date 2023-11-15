@@ -43,6 +43,7 @@ public class PlaceController : ControllerBase
         return Ok(_places);
     }
     [HttpPost("create")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Create(CreatePlace _Place)
     {
         _db.Place.Add(new Place{
@@ -55,6 +56,7 @@ public class PlaceController : ControllerBase
         return Ok("Place Created Successfully");
     }
     [HttpPut("edit")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Edit(EditPlace _place)
     {
         var _existingPlace = _db.Place.FirstOrDefault(p => p.Id == _place.Id);
@@ -69,6 +71,7 @@ public class PlaceController : ControllerBase
         return NotFound();
     }
     [HttpDelete("{Id}")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Delete(Guid Id)
     {
         Place placeToDelete = _db.Place.FirstOrDefault(pl => pl.Id == Id);
@@ -76,6 +79,7 @@ public class PlaceController : ControllerBase
         {
             _db.Place.Remove(placeToDelete);
             _db.SaveChanges();
+            return Ok("Place deleted successfully");
         }
         return NotFound();
     }
